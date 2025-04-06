@@ -49,7 +49,7 @@ deskripsi_sampah = {
 class_names = list(label_mapping.keys())
 
 # UI Streamlit
-st.title("♻️ Deteksi Jenis Sampah Otomatis")
+st.title("♻️ Deteksi Jenis Sampah Organik Dan Non Organik")
 st.write("Upload gambar sampah untuk mendeteksi jenisnya dan dapatkan informasi detail.")
 
 uploaded_file = st.file_uploader("Unggah gambar sampah...", type=["jpg", "jpeg", "png"])
