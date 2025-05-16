@@ -59,7 +59,7 @@ if page == "Beranda":
     st.markdown("- ✅ Jenis sampah (organik / non-organik)")
     st.markdown("- 📄 Penjelasan kategori sampah")
     st.markdown("- 🧠 Edukasi singkat tentang daur ulang")
-    st.image("https://images.unsplash.com/photo-1582719478175-ff3f767b89a7", caption="Ilustrasi Sampah", use_column_width=True)
+    st.image("https://media.istockphoto.com/id/1200963979/id/vektor/ilustrasi-vektor-konsep-daur-ulang-desain-modern-datar-untuk-halaman-web-spanduk-presentasi.jpg?s=612x612&w=0&k=20&c=l8xOrP-TCcQnNeUaixJ04yEGaqyLXMn9aDhHL9hG5JI=", caption="Ilustrasi Sampah", use_column_width=True)
 
     st.markdown("### 📷 Contoh Gambar")
     col1, col2, col3 = st.columns(3)
@@ -85,7 +85,8 @@ elif page == "Prediksi Sampah":
     uploaded_file = st.file_uploader("Unggah gambar sampah...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
-        st.image(uploaded_file, caption="Gambar yang Diunggah", use_column_width=True)
+        st.image(uploaded_file, caption="Gambar yang Diunggah", use_container_width=True)
+        
 
         try:
             img = image.load_img(uploaded_file, target_size=(224, 224))
