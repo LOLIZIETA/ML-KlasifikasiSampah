@@ -53,9 +53,9 @@ page = st.sidebar.radio("Pilih Halaman", ["Beranda", "Prediksi Sampah", "Tentang
 
 # Halaman Beranda
 if page == "Beranda":
-    st.markdown("<h1 style='text-align: center; color: green;'>♻️ Aplikasi Deteksi Sampah</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: green;'>♻️ Website Deteksi Sampah</h1>", unsafe_allow_html=True)
     st.markdown("### Selamat datang!")
-    st.write("Aplikasi ini membantu kamu mengenali jenis sampah dari gambar dan memberi informasi penting seperti:")
+    st.write("Website ini membantu kamu mengenali jenis sampah dari gambar dan memberi informasi penting seperti:")
     st.markdown("- ✅ Jenis sampah (organik / non-organik)")
     st.markdown("- 📄 Penjelasan kategori sampah")
     st.markdown("- 🧠 Edukasi singkat tentang daur ulang")
@@ -66,9 +66,9 @@ if page == "Beranda":
     with col1:
         st.image("https://static9.depositphotos.com/1000261/1129/i/450/depositphotos_11293200-stock-photo-waste-cardboard.jpg", caption="Kardus")
     with col2:
-        st.image("https://upload.wikimedia.org/wikipedia/commons/3/36/Plastic_bottles.jpg", caption="Plastik")
+        st.image("https://www.dbs.com/spark/index/id_id/site/img/pillars/89/89.jpg", caption="Plastik")
     with col3:
-        st.image("https://upload.wikimedia.org/wikipedia/commons/9/9e/Battery_collection.jpg", caption="Baterai")
+        st.image("https://assets-a1.kompasiana.com/items/album/2020/01/15/img-0141-5e1dfb0fd541df3d4f0dfdb3.jpg?t=o&v=1200", caption="Baterai")
 
     with st.expander("❓ Apa itu sampah organik dan non-organik?"):
         st.write("""
@@ -115,9 +115,9 @@ elif page == "Prediksi Sampah":
 
 # Halaman Tentang
 elif page == "Tentang":
-    st.markdown("## ℹ️ Tentang Aplikasi")
+    st.markdown("## ℹ️ Tentang Website")
     st.write("""
-    Aplikasi ini menggunakan model deep learning berbasis Convolutional Neural Network (CNN) untuk mengenali jenis sampah dari gambar.
+    Website ini menggunakan model deep learning berbasis Convolutional Neural Network (CNN) untuk mengenali jenis sampah dari gambar.
     
     Model telah dilatih menggunakan dataset dari berbagai kategori sampah, baik organik maupun non-organik.
     
@@ -131,4 +131,4 @@ elif page == "Tentang":
 
 # Footer
 st.markdown("---")
-st.markdown("<center>© 2025 - Aplikasi Deteksi Sampah oleh Anugerah Bakti Prasisto</center>", unsafe_allow_html=True)
+st.markdown("<center>© 2025 - Website Deteksi Sampah oleh Anugerah Bakti Prasisto</center>", unsafe_allow_html=True)
