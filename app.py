@@ -68,7 +68,7 @@ if page == "Beranda":
     with col2:
         st.image("https://www.dbs.com/spark/index/id_id/site/img/pillars/89/89.jpg", caption="Plastik")
     with col3:
-        st.image("https://assets-a1.kompasiana.com/items/album/2020/01/15/img-0141-5e1dfb0fd541df3d4f0dfdb3.jpg?t=o&v=1200", caption="Baterai")
+        st.image("https://mmc.tirto.id/image/2019/02/04/ilustrasi-baterai-istockphoto_ratio-16x9.jpg", caption="Baterai")
 
     with st.expander("❓ Apa itu sampah organik dan non-organik?"):
         st.write("""
