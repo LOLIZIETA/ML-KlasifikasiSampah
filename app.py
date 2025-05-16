@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import base64
+from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
@@ -59,7 +61,7 @@ if page == "Beranda":
     st.markdown("- ✅ Jenis sampah (organik / non-organik)")
     st.markdown("- 📄 Penjelasan kategori sampah")
     st.markdown("- 🧠 Edukasi singkat tentang daur ulang")
-    st.image("https://media.istockphoto.com/id/1200963979/id/vektor/ilustrasi-vektor-konsep-daur-ulang-desain-modern-datar-untuk-halaman-web-spanduk-presentasi.jpg?s=612x612&w=0&k=20&c=l8xOrP-TCcQnNeUaixJ04yEGaqyLXMn9aDhHL9hG5JI=", caption="Ilustrasi Sampah", use_column_width=True)
+    st.image("https://media.istockphoto.com/id/1200963979/id/vektor/ilustrasi-vektor-konsep-daur-ulang-desain-modern-datar-untuk-halaman-web-spanduk-presentasi.jpg?s=612x612&w=0&k=20&c=l8xOrP-TCcQnNeUaixJ04yEGaqyLXMn9aDhHL9hG5JI=", caption="Ilustrasi Sampah", use_container_width=True)
 
     st.markdown("### 📷 Contoh Gambar")
     col1, col2, col3 = st.columns(3)
@@ -85,11 +87,12 @@ elif page == "Prediksi Sampah":
     uploaded_file = st.file_uploader("Unggah gambar sampah...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
-        st.image(uploaded_file, caption="Gambar yang Diunggah", use_container_width=True)
-        
+        # Gunakan PIL
+        image_pil = Image.open(uploaded_file)
+        st.image(image_pil, caption="Gambar yang Diunggah", use_container_width=True)
 
         try:
-            img = image.load_img(uploaded_file, target_size=(224, 224))
+            img = image_pil.resize((224, 224))
             img_array = image.img_to_array(img)
             img_array = np.expand_dims(img_array, axis=0) / 255.0
 
