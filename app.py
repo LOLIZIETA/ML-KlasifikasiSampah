@@ -64,7 +64,7 @@ if page == "Beranda":
     st.markdown("### 📷 Contoh Gambar")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("https://upload.wikimedia.org/wikipedia/commons/6/6e/Cardboard_box.jpg", caption="Kardus")
+        st.image("https://static9.depositphotos.com/1000261/1129/i/450/depositphotos_11293200-stock-photo-waste-cardboard.jpg", caption="Kardus")
     with col2:
         st.image("https://upload.wikimedia.org/wikipedia/commons/3/36/Plastic_bottles.jpg", caption="Plastik")
     with col3:
@@ -127,8 +127,8 @@ elif page == "Tentang":
     - Mengurangi pencemaran dengan pemilahan yang benar
     """)
     st.markdown("📚 Dataset: [Kaggle - Garbage Classification](https://www.kaggle.com/datasets/mostafaabla/garbage-classification)")
-    st.markdown("🧑‍💻 Dibuat oleh: **[Namamu]**")
+    st.markdown("🧑‍💻 Dibuat oleh: **Anugerah Bakti Prasisto**")
 
 # Footer
 st.markdown("---")
-st.markdown("<center>© 2025 - Aplikasi Deteksi Sampah oleh [Namamu]</center>", unsafe_allow_html=True)
+st.markdown("<center>© 2025 - Aplikasi Deteksi Sampah oleh Anugerah Bakti Prasisto</center>", unsafe_allow_html=True)
