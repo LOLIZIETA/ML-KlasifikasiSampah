@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import base64
+import streamlit as st
 from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
@@ -71,6 +72,12 @@ if page == "Beranda":
         st.image("https://www.dbs.com/spark/index/id_id/site/img/pillars/89/89.jpg", caption="Plastik")
     with col3:
         st.image("https://mmc.tirto.id/image/2019/02/04/ilustrasi-baterai-istockphoto_ratio-16x9.jpg", caption="Baterai")
+
+    st.title("Contoh Menampilkan Video YouTube di Streamlit")
+
+    youtube_link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
+    st.video(youtube_link)
 
     with st.expander("❓ Apa itu sampah organik dan non-organik?"):
         st.write("""
